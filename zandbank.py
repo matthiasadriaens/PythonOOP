@@ -6,7 +6,7 @@ class cafe:
 	def __init__(self,info):
 		self.info = info
 		self.consumptions = []
-		self.employees = []
+		self.employees = ["Marloes"]
 
 	def order(self,consumption,quantity):
 		if quantity == 1:
@@ -16,7 +16,7 @@ class cafe:
 		amount_to_pay = str(quantity*consumption.price)
 		print "The amount to pay equals %s" % amount_to_pay 
 
-	def add_bediend(self,bediende):
+	def add_bediende(self,bediende):
 		self.employees.append(bediende)
 
 	def add_consumption(self,consumption):
@@ -36,5 +36,8 @@ if __name__ == "__main__":
 	yucca.add_consumption(ybeer)
 	marloes = bediende("Marloes de hete poes",10.7)
 	print marloes.hourpay
+	print marloes.number_of_serves
 	print yucca.consumptions
+	yucca.add_bediende("Mark")
+	print yucca.employees
 
