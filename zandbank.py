@@ -28,7 +28,6 @@ if __name__ == "__main__":
 	yucca = cafe("yucca")
 	yucca.add_consumption(ybeer)
 	yucca.order(ybeer,35)
-	print yucca.consumptions
 
 
 
