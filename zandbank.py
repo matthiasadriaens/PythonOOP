@@ -1,10 +1,12 @@
 from consumption import consumption
+from bediende import bediende
 
 class cafe:
 
-	consumptions = []
 	def __init__(self,info):
 		self.info = info
+		self.consumptions = []
+		self.employees = []
 
 	def order(self,consumption,quantity):
 		if quantity == 1:
@@ -14,21 +16,25 @@ class cafe:
 		amount_to_pay = str(quantity*consumption.price)
 		print "The amount to pay equals %s" % amount_to_pay 
 
+	def add_bediend(self,bediende):
+		self.employees.append(bediende)
+
 	def add_consumption(self,consumption):
 		self.consumptions.append(consumption)
 
 	def get_consumptions(self):
 		return self.consumptions
 
-	def __repr__(self):
-		return self.consumptions
+	def get_employees(self):
+		return self.employees
+
+
 
 if __name__ == "__main__":
-	ybeer = consumption("beer",2.67)
 	yucca = cafe("yucca")
+	ybeer = consumption("beer",2.67)
 	yucca.add_consumption(ybeer)
-
-
-
-
+	marloes = bediende("Marloes de hete poes",10.7)
+	print marloes.hourpay
+	print yucca.consumptions
 
