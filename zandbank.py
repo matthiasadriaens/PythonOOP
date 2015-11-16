@@ -27,7 +27,6 @@ if __name__ == "__main__":
 	ybeer = consumption("beer",2.67)
 	yucca = cafe("yucca")
 	yucca.add_consumption(ybeer)
-	yucca.order(ybeer,35)
 
 
 
